@@ -1,3 +1,4 @@
+import 'package:bmi/core/models/result_data.dart';
 import 'package:bmi/ui/views/result.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -12,7 +13,7 @@ class Router{
       case Router.HOME_PAGE:
         return MaterialPageRoute(builder: (_)=>Home());
       case Router.RESULT_PAGE:
-        return MaterialPageRoute(builder: (_)=>Result());
+        return MaterialPageRoute(builder: (_)=>Result(settings.arguments));
       default:
         return MaterialPageRoute(builder: (_)=>Scaffold(
           body: Center(

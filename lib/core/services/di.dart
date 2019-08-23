@@ -6,5 +6,5 @@ GetIt locator = GetIt();
 
 void setupLocator(){
   locator.registerLazySingleton(()=>HomeModel());
-  locator.registerLazySingleton(()=>ResultModel());
+  locator.registerFactory(()=>ResultModel());
 }
